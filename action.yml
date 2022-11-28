@@ -1,0 +1,23 @@
+name: 'RST Substitution'
+description: 'Replace substitutions in reStructuredText file'
+author: 'junghoon-vans'
+inputs:
+  input-file:
+    description: 'Input file path to read contents'
+    required: true
+  output-file:
+    description: 'Output file path to write contents'
+    required: true
+  substitutions:
+    description: 'Multiline strings for key-value pair of substitutions'
+    required: true
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: python -m pip install varst
+      shell: bash
+    - run: varst -i ${{ inputs.input-file }} -o ${{ inputs.output-file }} ${{ inputs.substitutions }}
+      shell: bash
