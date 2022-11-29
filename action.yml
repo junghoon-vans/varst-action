@@ -22,11 +22,11 @@ runs:
     - run: |
         cmd="varst"
 
-        if [ "${{ inputs.input-file }}" != "" ]; then
+        if [ -n "${{ inputs.input-file }}" ]; then
           cmd+=" -i ${{ inputs.input-file }}"
         fi
 
-        if [ "${{ inputs.output-file }}" != "" ]; then
+        if [ -n "${{ inputs.output-file }}" ]; then
           cmd+=" -o ${{ inputs.output-file }}"
         fi
 
