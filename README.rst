@@ -39,3 +39,9 @@ If multiple values need to be defined, use folded block scalar style.
      'name1=value1'
      'name2=value2'
      ...
+
+License
+=======
+
+`MIT
+License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICENSE>`__
