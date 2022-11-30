@@ -1,8 +1,8 @@
-=======================
-rst-substitution-action
-=======================
+============
+varst-action
+============
 
-Github action to replace substitutions in rst file.
+Github action to replace substitutions in rst file using varST_.
 
 Example workflow
 ================
@@ -14,7 +14,7 @@ Refer example workflow if you want to replace substitutions in ``README.rst`` an
    steps:
      - uses: actions/checkout@v3
      - name: Replace substitution
-     - uses: junghoon-vans/rst-substitution-action@main
+     - uses: junghoon-vans/varst-action@main
        with:
          substitutions: "name=value"
      - uses: stefanzweifel/git-auto-commit-action@v4
@@ -61,6 +61,9 @@ License
 
 `MIT
 License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICENSE>`__
+
+
+.. _varST: https://github.com/junghoon-vans/varst
 
 .. |Sample Workflow| replace:: here
 .. _Sample Workflow: https://github.com/junghoon-vans/checkstyle-cli/blob/main/.github/workflows/bump-version.yml
