@@ -32,3 +32,6 @@ runs:
 
         eval "${cmd} ${{ inputs.substitutions }}"
       shell: bash
+branding:
+  icon: "repeat"
+  color: "gray-dark"
