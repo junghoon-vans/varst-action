@@ -1,22 +1,22 @@
-name: 'RST Substitution'
-description: 'Replace substitutions in reStructuredText file'
-author: 'junghoon-vans'
+name: "RST Substitution"
+description: "Github action to replace substitutions in rst file."
+author: "junghoon-vans"
 inputs:
   input-file:
-    description: 'The file path to read contents.'
+    description: "The file path to read contents."
     required: false
   output-file:
-    description: 'The file path to write contents.'
+    description: "The file path to write contents."
     required: false
   substitutions:
-    description: 'A key-value of substitutions.'
+    description: "A key-value of substitutions."
     required: true
 runs:
   using: composite
   steps:
     - uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: "3.10"
     - run: python -m pip install varst
       shell: bash
     - run: |
@@ -32,3 +32,6 @@ runs:
 
         eval "${cmd} ${{ inputs.substitutions }}"
       shell: bash
+branding:
+  icon: "repeat"
+  color: "gray-dark"
