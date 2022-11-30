@@ -7,6 +7,9 @@ Github action to replace substitutions in rst file.
 Example workflow
 ================
 
+If you want to replace substitutions in ``README.rst`` and push it to repository,
+You can use a simple workflow as follows.
+
 .. code:: yml
 
    steps:
