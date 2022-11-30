@@ -4,6 +4,20 @@ rst-substitution-action
 
 Github action to replace substitutions in rst file.
 
+Example workflow
+================
+
+.. code:: yml
+
+   steps:
+     - uses: actions/checkout@v3
+     - name: Replace substitution
+     - uses: junghoon-vans/rst-substitution-action@main
+       with:
+         substitutions: "name=value"
+     - uses: stefanzweifel/git-auto-commit-action@v4
+
+Full example is |Sample Workflow|_.
 
 Inputs
 ======
@@ -45,3 +59,6 @@ License
 
 `MIT
 License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICENSE>`__
+
+.. |Sample Workflow| replace:: here
+.. _Sample Workflow: https://github.com/junghoon-vans/checkstyle-cli/blob/main/.github/workflows/bump-version.yml
