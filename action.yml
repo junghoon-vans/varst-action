@@ -3,13 +3,13 @@ description: 'Replace substitutions in reStructuredText file'
 author: 'junghoon-vans'
 inputs:
   input-file:
-    description: 'Input file path to read contents'
+    description: 'The file path to read contents.'
     required: false
   output-file:
-    description: 'Output file path to write contents'
+    description: 'The file path to write contents.'
     required: false
   substitutions:
-    description: 'Multiline strings for key-value pair of substitutions'
+    description: 'A key-value of substitutions.'
     required: true
 runs:
   using: composite
