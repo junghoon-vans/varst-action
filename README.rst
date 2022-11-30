@@ -2,7 +2,7 @@
 varst-action
 ============
 
-Github action to replace substitutions in rst file.
+Github action to replace substitutions in rst file using varST_.
 
 Example workflow
 ================
@@ -61,6 +61,9 @@ License
 
 `MIT
 License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICENSE>`__
+
+
+.. _varST: https://github.com/junghoon-vans/varst
 
 .. |Sample Workflow| replace:: here
 .. _Sample Workflow: https://github.com/junghoon-vans/checkstyle-cli/blob/main/.github/workflows/bump-version.yml
