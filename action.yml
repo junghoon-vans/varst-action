@@ -1,5 +1,5 @@
 name: "RST Substitution"
-description: "Replace substitutions in reStructuredText file"
+description: "Github action to replace substitutions in rst file."
 author: "junghoon-vans"
 inputs:
   input-file:
