@@ -9,12 +9,12 @@ Example workflow
 
 Refer example workflow if you want to replace substitutions in ``README.rst`` and push it to repository.
 
-.. code:: yml
+.. parsed-literal::
 
    steps:
      - uses: actions/checkout@v3
      - name: Replace substitution
-     - uses: junghoon-vans/varst-action@v1
+     - uses: junghoon-vans/varst-action@\ |release|
        with:
          substitutions: "name=value"
      - uses: stefanzweifel/git-auto-commit-action@v4
@@ -64,6 +64,7 @@ License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICE
 
 
 .. _varST: https://github.com/junghoon-vans/varst
+.. |release| replace:: v1
 
 .. |Sample Workflow| replace:: here
 .. _Sample Workflow: https://github.com/junghoon-vans/checkstyle-cli/blob/main/.github/workflows/bump-version.yml
