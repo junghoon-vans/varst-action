@@ -14,7 +14,7 @@ Refer example workflow if you want to replace substitutions in ``README.rst`` an
    steps:
      - uses: actions/checkout@v3
      - name: Replace substitution
-     - uses: junghoon-vans/varst-action@main
+     - uses: junghoon-vans/varst-action@v1
        with:
          substitutions: "name=value"
      - uses: stefanzweifel/git-auto-commit-action@v4
