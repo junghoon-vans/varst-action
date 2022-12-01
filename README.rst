@@ -67,4 +67,4 @@ License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICE
 .. |release| replace:: v1
 
 .. |Sample Workflow| replace:: here
-.. _Sample Workflow: https://github.com/junghoon-vans/checkstyle-cli/blob/main/.github/workflows/bump-version.yml
+.. _Sample Workflow: https://github.com/junghoon-vans/varst-action/blob/main/.github/workflows/bump-version.yml
