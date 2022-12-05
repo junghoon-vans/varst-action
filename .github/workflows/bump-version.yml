@@ -36,5 +36,5 @@ jobs:
         if: env.LATEST_TAG != env.REVISION
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "bump: version ${{ env.LATEST_TAG }} -> ${{ env.REVISION }}"
+          commit_message: "bump: version ${{ env.LATEST_TAG }} → ${{ env.REVISION }}"
           tagging_message: "v${{ env.REVISION }}"
