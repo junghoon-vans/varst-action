@@ -11,6 +11,9 @@ inputs:
   substitutions:
     description: "A key-value of substitutions."
     required: true
+  version:
+    description: "Version of varst."
+    default: "v1.2.0"
 runs:
   using: composite
   steps:
