@@ -11,6 +11,9 @@ inputs:
   substitutions:
     description: "A key-value of substitutions."
     required: true
+  version:
+    description: "Version of varst."
+    default: "v1.2.0"
 runs:
   using: composite
   steps:
@@ -18,7 +21,7 @@ runs:
       with:
         python-version: "3.10"
         cache: 'pip'
-    - run: pip install -r requirements.txt
+    - run: pip install varst=="${{ inputs.version }}"
       shell: bash
     - run: |
         cmd="varst"
