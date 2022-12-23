@@ -1,14 +1,8 @@
-## v1 (2022-12-01)
-
-### Feat
-
-- Running action without passing file paths
-- Create action.yml
+## v1.2.1 (2022-12-23)
 
 ### Refactor
 
-- Use n operator to check empty options
-- Save command to variable to reduce if statement
+- Remove pip cache option in setup-python action
 
 ## v1.2.0 (2022-12-06)
 
