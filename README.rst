@@ -56,6 +56,14 @@ If multiple values need to be defined, use folded block scalar style.
      'name2=value2'
      ...
 
+version
+~~~~~~~
+
+**Optional**
+The version of varST to use.
+
+If not specified, the latest version will be used.
+
 License
 =======
 
