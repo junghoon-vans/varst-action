@@ -13,14 +13,20 @@ inputs:
     required: true
   version:
     description: "Version of varst."
-    default: "v1.2.0"
+    required: false
 runs:
   using: composite
   steps:
     - uses: actions/setup-python@v4
       with:
         python-version: "3.10"
-    - run: pip install varst=="${{ inputs.version }}"
+    - name: Install varst
+      run: |
+        if [ -z "${{ inputs.version }}" ]; then
+          pip install varst
+        else
+          pip install varst==${{ inputs.version }}
+        fi
       shell: bash
     - run: |
         cmd="varst"
