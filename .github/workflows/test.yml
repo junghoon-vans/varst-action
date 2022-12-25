@@ -9,5 +9,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Run varst action with default inputs
+      - uses: actions/checkout@v3
+      - name: Run varst action
         uses: junghoon-vans/varst-action@v1
+        with:
+          input-file: data/test.rst
+      - name: Check result
+        run: |
+          diff data/test.rst data/test.expected.rst
+          DIFF_RESULT=$?
+          if [ $DIFF_RESULT -eq 0 ]; then
+              echo "Test succeeded"
+          else
+              echo "Test failed"
+              exit 1
+          fi
