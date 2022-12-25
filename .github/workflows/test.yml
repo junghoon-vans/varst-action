@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run varst action
-        uses: junghoon-vans/varst-action@v1
+        uses: ./
         with:
           input-file: .github/workflows/data/test.rst
           substitutions: >-
