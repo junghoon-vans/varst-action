@@ -14,6 +14,9 @@ jobs:
         uses: junghoon-vans/varst-action@v1
         with:
           input-file: .github/workflows/data/test.rst
+          substitutions: >-
+            'status=true'
+            'with whitespace=true'
       - name: Check result
         working-directory: .github/workflows/data
         run: |
