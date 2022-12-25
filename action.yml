@@ -12,7 +12,7 @@ inputs:
     description: "A key-value of substitutions."
     required: true
   version:
-    description: "Version of varst."
+    description: "The version of varST to use."
     required: false
 runs:
   using: composite
