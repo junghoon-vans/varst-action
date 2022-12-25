@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run varst action
+        uses: ./
+        with:
+          input-file: .github/workflows/data/test.rst
+          substitutions: >-
+            'status=true'
+            'with whitespace=true'
+      - name: Check result
+        working-directory: .github/workflows/data
+        run: |
+          diff test.rst test.expected.rst
+          DIFF_RESULT=$?
+          if [ $DIFF_RESULT -eq 0 ]; then
+              echo "Test succeeded"
+          else
+              echo "Test failed"
+              exit 1
+          fi
