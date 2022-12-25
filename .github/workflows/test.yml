@@ -13,10 +13,11 @@ jobs:
       - name: Run varst action
         uses: junghoon-vans/varst-action@v1
         with:
-          input-file: data/test.rst
+          input-file: .github/workflows/data/test.rst
       - name: Check result
+        working-directory: .github/workflows/data
         run: |
-          diff data/test.rst data/test.expected.rst
+          diff test.rst test.expected.rst
           DIFF_RESULT=$?
           if [ $DIFF_RESULT -eq 0 ]; then
               echo "Test succeeded"
