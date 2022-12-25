@@ -1,3 +1,9 @@
+## v1.3.0 (2022-12-25)
+
+### Feat
+
+- Set default version of varst to latest
+
 ## v1.2.1 (2022-12-23)
 
 ### Refactor
