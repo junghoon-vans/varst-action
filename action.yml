@@ -29,17 +29,17 @@ runs:
         fi
       shell: bash
     - run: |
-        cmd="varst"
+        cmd=('varst')
 
         if [ -n "${{ inputs.input-file }}" ]; then
-          cmd+=" -i ${{ inputs.input-file }}"
+          cmd+=('-i' "${{ inputs.input-file }}")
         fi
 
         if [ -n "${{ inputs.output-file }}" ]; then
-          cmd+=" -o ${{ inputs.output-file }}"
+          cmd+=('-o' "${{ inputs.output-file }}")
         fi
-
-        eval "${cmd} ${{ inputs.substitutions }}"
+        
+        "${cmd[@]} ${{ inputs.substitutions }}"
       shell: bash
 branding:
   icon: "repeat"
