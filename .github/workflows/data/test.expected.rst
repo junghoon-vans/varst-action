@@ -1,7 +1,17 @@
-Substitution Test
-=================
+Substitution Definitions
+========================
 
-replace: |status|, with space: |with whitespace|
+|logo|
 
-.. |status| replace:: true
-.. |with whitespace| replace:: true
+|RST|_ is a little annoying to type over and over, especially
+when writing about |RST| itself, and spelling out the
+bicapitalized word |RST| every time isn't really necessary for
+|RST| source readability.
+
+
+.. |logo| image:: https://docutils.sourceforge.io/rst.png?foo=bar
+   :alt: reStructuredText logo
+   :target: https://docutils.sourceforge.io/rst.html
+
+.. |RST| replace:: reStructuredText
+.. _RST: https://docutils.sourceforge.io/rst.html

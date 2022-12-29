@@ -15,8 +15,8 @@ jobs:
         with:
           input-file: .github/workflows/data/test.rst
           substitutions: >-
-            'status=true'
-            'with whitespace=true'
+            'RST=reStructuredText'
+            'logo=https://docutils.sourceforge.io/rst.png?foo=bar'
       - name: Check result
         working-directory: .github/workflows/data
         run: |
