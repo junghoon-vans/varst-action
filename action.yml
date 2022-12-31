@@ -39,7 +39,12 @@ runs:
           cmd+=('-o' "${{ inputs.output-file }}")
         fi
         
-        "${cmd[@]} ${{ inputs.substitutions }}"
+        while IFS= read -r line; do
+          cmd+=("$line")
+        done <<< "${{ inputs.substitutions }}"
+        
+        echo "${cmd[@]}"
+        eval "${cmd[@]}"
       shell: bash
 branding:
   icon: "repeat"
