@@ -1,3 +1,9 @@
+## v1.5.0 (2023-01-01)
+
+### Feat
+
+- **entrypoint**: Remove newline if exists in last line of substitutions
+
 ## v1.4.0 (2023-01-01)
 
 ### Feat
