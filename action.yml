@@ -15,13 +15,8 @@ inputs:
     description: "The version of varST to use."
     required: false
 runs:
-  using: composite
-  steps:
-    - uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
-    - run: sh entrypoint.sh
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
 branding:
   icon: "repeat"
   color: "gray-dark"
