@@ -1,17 +1,24 @@
-if [ -z "${{ inputs.version }}" ]; then
+
+INPUT_FILE="${1}"
+OUTPUT_FILE="${2}"
+SUBSTITUTIONS="${3}"
+VARST_VERSION="${4}"
+
+if [ -z "${VARST_VERSION}" ]; then
   pip install varst
 else
-  pip install varst=="${{ inputs.version }}"
+  pip install varst=="${VARST_VERSION}"
 fi
 
 cmd=('varst')
 
-if [ -n "${{ inputs.input-file }}" ]; then
-  cmd+=('-i' "${{ inputs.input-file }}")
+if [ -n "${INPUT_FILE}" ]; then
+  cmd+=('-i' "${INPUT_FILE}")
+
 fi
 
-if [ -n "${{ inputs.output-file }}" ]; then
-  cmd+=('-o' "${{ inputs.output-file }}")
+if [ -n "${OUTPUT_FILE}" ]; then
+  cmd+=('-o' "${OUTPUT_FILE}")
 fi
 
 while IFS= read -r line; do
@@ -19,7 +26,7 @@ while IFS= read -r line; do
       line="'$line'"
   fi
   cmd+=("$line")
-done <<< "${{ inputs.substitutions }}"
+done <<< "${SUBSTITUTIONS}"
 
 echo "${cmd[@]}"
 eval "${cmd[@]}"

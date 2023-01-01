@@ -17,6 +17,11 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+      - ${{ inputs.input-file }}
+      - ${{ inputs.output-file }}
+      - ${{ inputs.substitutions }}
+      - ${{ inputs.version }}
 branding:
   icon: "repeat"
   color: "gray-dark"
