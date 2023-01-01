@@ -14,7 +14,7 @@ jobs:
         uses: ./
         with:
           input-file: .github/workflows/data/test.rst
-          substitutions: >-
+          substitutions: |
             'RST=reStructuredText'
             'logo=https://docutils.sourceforge.io/rst.png?foo=bar'
       - name: Check result
