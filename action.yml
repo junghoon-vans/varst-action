@@ -40,6 +40,9 @@ runs:
         fi
         
         while IFS= read -r line; do
+          if [[ ! $line =~ "'" ]]; then
+              line="'$line'"
+          fi
           cmd+=("$line")
         done <<< "${{ inputs.substitutions }}"
         
