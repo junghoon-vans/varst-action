@@ -74,7 +74,7 @@ License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICE
 
 
 .. _varST: https://github.com/junghoon-vans/varst
-.. |release| replace:: v1.3.1
+.. |release| replace:: v1.4.0
 
 .. |Sample Workflow| replace:: here
 .. _Sample Workflow: https://github.com/junghoon-vans/varst-action/blob/main/.github/workflows/bump-version.yml

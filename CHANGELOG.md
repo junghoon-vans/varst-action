@@ -1,3 +1,14 @@
+## v1.4.0 (2023-01-01)
+
+### Feat
+
+- Create entrypoint.sh
+
+### Refactor
+
+- **entrypoint**: Add header to declare script file
+- Pass environment variable to entrypoint.sh
+
 ## v1.3.1 (2023-01-01)
 
 ### Fix
