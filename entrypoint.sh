@@ -22,6 +22,7 @@ if [ -n "${OUTPUT_FILE}" ]; then
   cmd+=('-o' "${OUTPUT_FILE}")
 fi
 
+SUBSTITUTIONS=$(echo "${SUBSTITUTIONS}" | sed -z 's/\n\+$//')
 while IFS= read -r line; do
   if [[ ! $line =~ "'" ]]; then
       line="'$line'"

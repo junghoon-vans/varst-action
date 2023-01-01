@@ -49,11 +49,25 @@ A key-value of substitutions.
     **Note**
     The value must be enclosed in single quotes.
 
-If multiple values need to be defined, use folded block scalar style.
+If multiple values need to be defined, use block scalar style.
+Two style of block scalar are supported.
+
+Literal style
+^^^^^^^^^^^^^
 
 .. code:: yml
 
-   substitutions: >-
+   substitutions: |
+     'name1=value1'
+     'name2=value2'
+     ...
+
+Folded style
+^^^^^^^^^^^^
+
+.. code:: yml
+
+   substitutions: >
      'name1=value1'
      'name2=value2'
      ...
