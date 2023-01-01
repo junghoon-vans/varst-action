@@ -16,7 +16,7 @@ Refer example workflow if you want to replace substitutions in ``README.rst`` an
      - name: Replace substitution
      - uses: junghoon-vans/varst-action@\ |release|
        with:
-         substitutions: "name=value"
+         substitutions: 'name=value'
      - uses: stefanzweifel/git-auto-commit-action@v4
 
 Full example is |Sample Workflow|_.
@@ -46,8 +46,10 @@ substitutions
 **Required**
 A key-value of substitutions.
 
-If multiple values need to be defined, use folded block scalar style.
+    **Note**
+    The value must be enclosed in single quotes.
 
+If multiple values need to be defined, use folded block scalar style.
 
 .. code:: yml
 
