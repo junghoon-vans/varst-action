@@ -1,3 +1,14 @@
+## v1.3.1 (2023-01-01)
+
+### Fix
+
+- Resolve error that occur when quote simbol is missing
+
+### Refactor
+
+- Split substitutions by new line
+- Use array variable to call varst command
+
 ## v1.3.0 (2022-12-25)
 
 ### Feat
