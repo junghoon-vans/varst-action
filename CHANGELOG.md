@@ -1,3 +1,9 @@
+## v1.6.0 (2023-01-03)
+
+### Feat
+
+- Add double_quotes_to_single_quotes function
+
 ## v1.5.1 (2023-01-03)
 
 ### Refactor
