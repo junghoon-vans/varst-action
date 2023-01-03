@@ -5,6 +5,11 @@ OUTPUT_FILE="${2}"
 SUBSTITUTIONS="${3}"
 VARST_VERSION="${4}"
 
+function main() {
+  install_varst
+  execute_varst
+}
+
 function install_varst() {
   if [ -z "${VARST_VERSION}" ]; then
     pip install varst
@@ -35,5 +40,4 @@ function execute_varst() {
   eval "${cmd[@]}"
 }
 
-install_varst
-execute_varst
+main
