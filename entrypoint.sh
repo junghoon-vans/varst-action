@@ -15,9 +15,7 @@ cmd=('varst')
 
 if [ -n "${INPUT_FILE}" ]; then
   cmd+=('-i' "${INPUT_FILE}")
-
 fi
-
 if [ -n "${OUTPUT_FILE}" ]; then
   cmd+=('-o' "${OUTPUT_FILE}")
 fi
