@@ -8,6 +8,8 @@ SUBSTITUTIONS="${3}"
 
 function main() {
   install_varst
+  SUBSTITUTIONS=$(remove_trailing_newline "${SUBSTITUTIONS}")
+  readonly SUBSTITUTIONS
   execute_varst
 }
 
@@ -17,6 +19,12 @@ function install_varst() {
   else
     pip install varst=="${VARST_VERSION}"
   fi
+}
+
+function remove_trailing_newline() {
+  arg1="${1}"
+  arg1=$(echo "${arg1}" | sed -z 's/\n\+$//')
+  echo "${arg1}"
 }
 
 function execute_varst() {
@@ -29,7 +37,6 @@ function execute_varst() {
     cmd+=('-o' "${OUTPUT_FILE}")
   fi
 
-  SUBSTITUTIONS=$(echo "${SUBSTITUTIONS}" | sed -z 's/\n\+$//')
   while IFS= read -r substitution; do
     if [[ ! $substitution =~ "'" ]]; then
         substitution="'$substitution'"
