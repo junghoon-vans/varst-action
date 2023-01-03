@@ -1,3 +1,12 @@
+## v1.5.1 (2023-01-03)
+
+### Refactor
+
+- Add remove_trailing_newline function
+- Make constant values to readonly
+- Add main function for entrypoint
+- Create function to declare working steps
+
 ## v1.5.0 (2023-01-01)
 
 ### Feat
