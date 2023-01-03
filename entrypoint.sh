@@ -29,11 +29,11 @@ function execute_varst() {
   fi
 
   SUBSTITUTIONS=$(echo "${SUBSTITUTIONS}" | sed -z 's/\n\+$//')
-  while IFS= read -r line; do
-    if [[ ! $line =~ "'" ]]; then
-        line="'$line'"
+  while IFS= read -r substitution; do
+    if [[ ! $substitution =~ "'" ]]; then
+        substitution="'$substitution'"
     fi
-    cmd+=("$line")
+    cmd+=("$substitution")
   done <<< "${SUBSTITUTIONS}"
 
   echo "${cmd[@]}"
