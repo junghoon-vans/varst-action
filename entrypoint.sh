@@ -9,6 +9,7 @@ SUBSTITUTIONS="${3}"
 function main() {
   install_varst
   SUBSTITUTIONS=$(remove_trailing_newline "${SUBSTITUTIONS}")
+  SUBSTITUTIONS=$(double_quotes_to_single_quotes "${SUBSTITUTIONS}")
   readonly SUBSTITUTIONS
   execute_varst
 }
@@ -19,12 +20,6 @@ function install_varst() {
   else
     pip install varst=="${VARST_VERSION}"
   fi
-}
-
-function remove_trailing_newline() {
-  arg1="${1}"
-  arg1=$(echo "${arg1}" | sed -z 's/\n\+$//')
-  echo "${arg1}"
 }
 
 function execute_varst() {
@@ -46,6 +41,18 @@ function execute_varst() {
 
   echo "${cmd[@]}"
   eval "${cmd[@]}"
+}
+
+function remove_trailing_newline() {
+  arg1="${1}"
+  arg1=$(echo "${arg1}" | sed -z 's/\n\+$//')
+  echo "${arg1}"
+}
+
+function double_quotes_to_single_quotes() {
+  arg1="${1}"
+  arg1=$(echo "${arg1}" | sed -z 's/"/'\''/g')
+  echo "${arg1}"
 }
 
 main
