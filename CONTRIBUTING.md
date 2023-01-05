@@ -10,7 +10,7 @@ Style guide
 ### Branch Naming
 
 We use the [Git-Flow](https://nvie.com/posts/a-successful-git-branching-model/) branching model.
-The branch names are prefixed with `feature/`, `bugfix/`, `hotfix/` or `ci/`.
+The branch names are prefixed with `feature/`, `bugfix/`, `hotfix/`, `docs/` or `ci/`.
 The `main` branch is the stable branch. Your pull requests should be made against the `main` branch.
 
 ### Commit Convention
