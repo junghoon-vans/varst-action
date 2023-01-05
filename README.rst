@@ -77,6 +77,24 @@ The version of varST to use.
 
 If not specified, the latest version will be used.
 
+Contributing
+============
+
+Contribution Guideline
+~~~~~~~~~~~~~~~~~~~~~~
+
+Please read the |contributing guidelines|_ to learn how to contribute to this project.
+
+Reporting Issues
+~~~~~~~~~~~~~~~~
+
+If you have any questions, suggestions, or bug reports, please feel free to report them to the issue.
+
+Code of Conduct
+~~~~~~~~~~~~~~~
+
+This project is governed by the |code of conduct|_.
+
 License
 =======
 
@@ -89,3 +107,8 @@ License <https://github.com/junghoon-vans/rst-substitution-action/blob/main/LICE
 
 .. |Sample Workflow| replace:: here
 .. _Sample Workflow: https://github.com/junghoon-vans/varst-action/blob/main/.github/workflows/bump-version.yml
+
+.. |contributing guidelines| replace:: contributing guidelines
+.. _contributing guidelines: https://github.com/junghoon-vans/varst-action/blob/main//CONTRIBUTING.md
+.. |Code Of Conduct| replace:: Code of Conduct
+.. _Code Of Conduct: ./CODE_OF_CONDUCT.md
