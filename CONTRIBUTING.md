@@ -24,6 +24,11 @@ So, please follow the convention when you commit.
 All of code should follow the [Shell Style Guide](https://google.github.io/styleguide/shellguide.html).
 If you don't know how to write shell scripts, please read the [Learn Linux Shell](https://learn.openwaterfoundation.org/owf-learn-linux-shell/)
 
+### Pull Request
+
+The title of the pull request should be the same as the title of the branch.
+If branch name is `feature/awesome-feature`, the title of the pull request should be `feat: awesome feature`.
+
 How to contribute
 ---
 
