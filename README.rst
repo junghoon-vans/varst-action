@@ -2,7 +2,7 @@
 varst-action
 ============
 
-Github action to replace substitutions in rst file using varST_.
+GitHub Actions to replace substitutions in rst file using varST_.
 
 Example workflow
 ================
