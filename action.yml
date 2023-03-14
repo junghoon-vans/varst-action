@@ -18,10 +18,10 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-      - ${{ inputs.input-file }}
-      - ${{ inputs.output-file }}
-      - ${{ inputs.substitutions }}
-      - ${{ inputs.version }}
+    - ${{ inputs.version }}
+    - ${{ inputs.input-file }}
+    - ${{ inputs.output-file }}
+    - ${{ inputs.substitutions }}
 branding:
   icon: "repeat"
   color: "gray-dark"

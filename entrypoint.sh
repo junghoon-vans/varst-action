@@ -1,10 +1,10 @@
 #!/bin/bash
 
-readonly INPUT_FILE="${1}"
-readonly OUTPUT_FILE="${2}"
-readonly VARST_VERSION="${4}"
+readonly VARST_VERSION="${1}"
+readonly INPUT_FILE="${2}"
+readonly OUTPUT_FILE="${3}"
 
-SUBSTITUTIONS="${3}"
+SUBSTITUTIONS="${4}"
 
 function main() {
   install_varst
