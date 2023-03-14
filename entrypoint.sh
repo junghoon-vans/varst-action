@@ -34,7 +34,7 @@ function execute_varst() {
   cmd+=("${SUBSTITUTIONS[@]}")
 
   echo "${cmd[@]}"
-  eval "${cmd[@]}"
+  "${cmd[@]}"
 }
 
 main
