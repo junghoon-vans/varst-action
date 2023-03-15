@@ -74,3 +74,26 @@ jobs:
               echo "Test failed"
               exit 1
           fi
+
+  folded-style-with-double-quote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run varst action
+        uses: ./
+        with:
+          input-file: .github/workflows/data/test.rst
+          substitutions: >
+            "RST=reStructuredText"
+            "logo=https://docutils.sourceforge.io/rst.png?foo=bar"
+      - name: Check result
+        working-directory: .github/workflows/data
+        run: |
+          diff test.rst test.expected.rst
+          DIFF_RESULT=$?
+          if [ $DIFF_RESULT -eq 0 ]; then
+              echo "Test succeeded"
+          else
+              echo "Test failed"
+              exit 1
+          fi
