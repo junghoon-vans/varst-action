@@ -32,12 +32,7 @@ function execute_varst() {
     cmd+=('-o' "${OUTPUT_FILE}")
   fi
 
-  while IFS= read -r substitution; do
-    if [[ ! $substitution =~ "'" ]]; then
-        substitution="'$substitution'"
-    fi
-    cmd+=("$substitution")
-  done <<< "${SUBSTITUTIONS}"
+  cmd+=("${SUBSTITUTIONS}")
 
   echo "${cmd[@]}"
   eval "${cmd[@]}"
@@ -46,7 +41,13 @@ function execute_varst() {
 function remove_trailing_newline() {
   arg1="${1}"
   arg1=$(echo "${arg1}" | sed -z 's/\n\+$//')
-  echo "${arg1}"
+
+  local result=()
+  while IFS= read -r line; do
+    result+=("$line")
+  done <<< "${arg1}"
+
+  echo "${result[@]}"
 }
 
 function double_quotes_to_single_quotes() {
