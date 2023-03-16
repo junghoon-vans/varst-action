@@ -7,10 +7,11 @@ readonly OUTPUT_FILE="${3}"
 SUBSTITUTIONS="${4}"
 
 function main() {
-  install_varst
   SUBSTITUTIONS=$(remove_trailing_newline "${SUBSTITUTIONS}")
   SUBSTITUTIONS=$(double_quotes_to_single_quotes "${SUBSTITUTIONS}")
   readonly SUBSTITUTIONS
+  
+  install_varst
   execute_varst
 }
 
