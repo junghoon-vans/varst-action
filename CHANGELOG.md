@@ -1,3 +1,12 @@
+## v1.6.1 (2023-03-16)
+
+### Refactor
+
+- Use mapfile command to get substitutions as array
+- Reorder code in main function
+- Update remove_trailing_newline function
+- Reorder action arguments
+
 ## v1.6.0 (2023-01-03)
 
 ### Feat
