@@ -1,16 +1,15 @@
 #!/bin/bash
 
-readonly INPUT_FILE="${1}"
-readonly OUTPUT_FILE="${2}"
-readonly VARST_VERSION="${4}"
+readonly VARST_VERSION="${1}"
+readonly INPUT_FILE="${2}"
+readonly OUTPUT_FILE="${3}"
 
-SUBSTITUTIONS="${3}"
+declare -a SUBSTITUTIONS
+mapfile -t SUBSTITUTIONS <<< "${4}"
+readonly SUBSTITUTIONS
 
 function main() {
   install_varst
-  SUBSTITUTIONS=$(remove_trailing_newline "${SUBSTITUTIONS}")
-  SUBSTITUTIONS=$(double_quotes_to_single_quotes "${SUBSTITUTIONS}")
-  readonly SUBSTITUTIONS
   execute_varst
 }
 
@@ -32,27 +31,10 @@ function execute_varst() {
     cmd+=('-o' "${OUTPUT_FILE}")
   fi
 
-  while IFS= read -r substitution; do
-    if [[ ! $substitution =~ "'" ]]; then
-        substitution="'$substitution'"
-    fi
-    cmd+=("$substitution")
-  done <<< "${SUBSTITUTIONS}"
+  cmd+=("${SUBSTITUTIONS[@]}")
 
   echo "${cmd[@]}"
   eval "${cmd[@]}"
-}
-
-function remove_trailing_newline() {
-  arg1="${1}"
-  arg1=$(echo "${arg1}" | sed -z 's/\n\+$//')
-  echo "${arg1}"
-}
-
-function double_quotes_to_single_quotes() {
-  arg1="${1}"
-  arg1=$(echo "${arg1}" | sed -z 's/"/'\''/g')
-  echo "${arg1}"
 }
 
 main
