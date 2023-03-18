@@ -1,3 +1,17 @@
+## v2.0.0 (2023-03-18)
+
+### Feat
+
+- Deprecated support for substitutions in folded style
+
+### Fix
+
+- Drop eval to run varst
+
+### Refactor
+
+- Remove all quotes at the end of substitutions
+
 ## v1.6.1 (2023-03-16)
 
 ### Refactor
