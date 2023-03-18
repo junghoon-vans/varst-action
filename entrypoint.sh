@@ -5,7 +5,7 @@ readonly INPUT_FILE="${2}"
 readonly OUTPUT_FILE="${3}"
 
 declare -a SUBSTITUTIONS
-mapfile -t SUBSTITUTIONS <<< "${4}"
+mapfile -t SUBSTITUTIONS <<< "$(echo "$4" | tr -d '"' | tr -d "'")"
 readonly SUBSTITUTIONS
 
 function main() {
