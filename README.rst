@@ -46,25 +46,11 @@ substitutions
 **Required**
 A key-value of substitutions.
 
-If multiple values need to be defined, use block scalar style.
-Two style of block scalar are supported.
-
-Literal style
-^^^^^^^^^^^^^
+If multiple values need to be defined, use the literal style, indicated by a pipe (``|``)
 
 .. code:: yml
 
    substitutions: |
-     'name1=value1'
-     'name2=value2'
-     ...
-
-Folded style
-^^^^^^^^^^^^
-
-.. code:: yml
-
-   substitutions: >
      'name1=value1'
      'name2=value2'
      ...
